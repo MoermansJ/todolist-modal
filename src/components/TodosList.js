@@ -12,7 +12,6 @@ const TodosList = ({ todos, setTodos, setEditTodo }) => {
 	};
 
 	const handleEdit = ({ id }) => {
-
 		setModal(true)
 		setId(id)
 	}
@@ -65,7 +64,7 @@ const TodosList = ({ todos, setTodos, setEditTodo }) => {
 								onClick={() => handleDelete(todo)}>
 							</i>
 						</button>
-						<Modal todo={todo} setModal={setModal} setId={setId} setEditTodo={setEditTodo} handleEdit={handleEdit} todos={todos} />
+						<Modal todo={todo} setModal={setModal} setId={setId} setEditTodo={setEditTodo} handleEdit={handleEdit} todos={todos} id={id} />
 					</div>
 				</li>
 			))}

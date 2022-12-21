@@ -1,7 +1,7 @@
 import "./Modal.css"
 import { useRef } from "react";
 
-function Modal({ todo, setModal, setId, todos, setEditTodo }) {
+function Modal({ todo, setModal, setId, todos, setEditTodo, id }) {
 	const inputRef = useRef();
 
 	const closeModal = () => {
@@ -10,7 +10,7 @@ function Modal({ todo, setModal, setId, todos, setEditTodo }) {
 	}
 
 	const handleSave = () => {
-		const findTodo = todos.find((todo) => todo.id);
+		const findTodo = todos.find((todo) => todo.id === id);
 		findTodo.title = inputRef.current.value;
 		closeModal();
 	}
